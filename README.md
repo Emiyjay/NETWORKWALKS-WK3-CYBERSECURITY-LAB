@@ -10,74 +10,88 @@
 
 ## Overview
 
-Week 3 focused on password security testing in an authorized educational lab environment.
+Week 3 covered password-security testing in an authorized educational laboratory.
 
-The two essential modules completed were **W3-PM1 — Password Cracking with JTR** and **W3-PM2 — Password Cracking with NetworkWalks Tools**.
+### Mandatory modules
+- **W3-PM1 — Password Cracking with JTR**
+- **W3-PM2 — Password Cracking with NetworkWalks Tools**
 
-The objective was to recover the password of the instructor-provided protected PDF using two different workflows and verify the recovered password by opening the PDF.
+The practical objective was to recover the password of an instructor-provided protected PDF through two authorized workflows and verify the result by opening the protected file.
 
-> Authorization: These activities were performed only against the instructor-provided laboratory PDF. No third-party account, system, or password was targeted.
+> **Authorization and scope:** Testing was limited to the instructor-provided laboratory material. No third-party account, system, or credential was targeted.
 
 ## W3-PM1 — John the Ripper
 
+Workflow completed:
+
 1. Obtain the authorized protected PDF.
 2. Extract the PDF password hash.
-3. Save the hash as the JTR input.
-4. Load it into John the Ripper/Johnny.
-5. Run the password-recovery attack.
-6. Record the successful result.
-7. Verify the recovered password by opening the protected PDF.
+3. Save the extracted hash as the JTR input.
+4. Load the hash into John the Ripper / Johnny.
+5. Run the password-recovery process.
+6. Observe the recovery result.
+7. Verify the recovered password against the protected PDF.
 
 **Tools:** John the Ripper, Johnny GUI, PDF hash extraction workflow, Windows.
 
 ## W3-PM2 — NetworkWalks Tools
 
+Workflow completed:
+
 1. Obtain the authorized protected PDF.
-2. Upload it to the NetworkWalks Hash Calculator.
-3. Extract the PDF hash.
-4. Submit the hash to the NetworkWalks Password Cracker.
-5. Run the dictionary-based recovery process.
-6. Record the successful result.
-7. Verify the recovered password by opening the protected PDF.
+2. Use the NetworkWalks Hash Calculator to extract the PDF hash.
+3. Submit the hash to the NetworkWalks Password Cracker.
+4. Run the dictionary-based recovery process.
+5. Observe the recovery result.
+6. Verify the result by opening the protected PDF.
 
 **Tools:** NetworkWalks Hash Calculator, NetworkWalks Password Cracker, web browser.
+
+## Evidence Available for Submission
+
+The practical evidence currently available for upload consists of:
+
+- Three screenshots showing the locked PDF laboratory files.
+- Week 3 completion/congratulations screenshot.
+- CTF ID screenshot.
+
+Additional screenshots can be added to the Evidence directory later if required by the submission rubric.
+
+## Evidence Handling
+
+For public GitHub publication, do **not** expose:
+- Complete password hashes
+- Recovered passwords
+- Credentials
+- Cookies or session tokens
+- Private personal information
+- Unnecessary sensitive laboratory data
+
+The evidence should demonstrate completion without publishing secrets.
 
 ## Comparison
 
 | Area | JTR / Johnny | NetworkWalks Tools |
 |---|---|---|
 | Environment | Local installation | Web browser |
-| Hash preparation | PDF hash extraction | Built-in Hash Calculator |
-| Cracking interface | JTR / Johnny | Web interface |
-| Wordlist | JTR configuration | Built-in/uploadable list |
-| Learning focus | Professional password testing | Educational workflow |
+| Hash preparation | PDF hash extraction | Hash Calculator |
+| Recovery interface | JTR / Johnny | Web interface |
+| Wordlist approach | JTR configuration | Built-in/uploadable list |
+| Learning focus | Local password-security testing | Educational password-recovery workflow |
 
-Both methods follow the same concept: **protected file → hash → candidate passwords → match → verification**.
+Both workflows demonstrate the same security concept:
+
+**Protected file → hash extraction → password candidates → matching process → verification**
 
 ## Security Lessons
 
-A password hash is not the plaintext password. Password-recovery tools test candidate passwords against stored verification material.
+The exercises demonstrate why password strength matters. Password-recovery testing can be used in an authorized environment to evaluate how resistant protected material is to guessing and dictionary-based attacks.
 
-Weak or common passwords can be more susceptible to dictionary-based guessing. Strong, unique passwords make simple guessing attacks more difficult.
-
-## Public Repository Safety
-
-Do not commit the original protected PDF, complete password hash, recovered password, credentials, cookies, tokens, or other sensitive material.
-
-## Evidence
-
-Recommended sanitized evidence:
-
-- JTR/Johnny setup
-- Hash extraction
-- JTR recovery result
-- NetworkWalks Hash Calculator
-- NetworkWalks Password Cracker result
-- Protected PDF verification
+A security practitioner should also protect the recovered password and extracted hash as sensitive information rather than publishing them in a public repository.
 
 ## Conclusion
 
-Week 3 provided practical experience with password-security testing using both a locally installed professional tool and a browser-based educational workflow. The exercises reinforced password strength, authorization, evidence handling, and responsible security testing.
+Week 3 provided practical experience with password-security testing using both a locally installed toolset and a browser-based educational workflow. The work reinforced password security, hash handling, authorization, evidence collection, and responsible cybersecurity practice.
 
 ---
 
